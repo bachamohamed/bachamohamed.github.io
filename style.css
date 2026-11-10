@@ -161,6 +161,42 @@ h3 { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.4rem; }
 .carte a { font-weight: 600; }
 
 /* =========================================================
+   PAGES PROJETS (les coulisses d'un projet)
+   ========================================================= */
+.projet { padding: 3rem 0 2rem; }
+.projet .intro { font-size: 1.15rem; }
+
+/* Fiche rapide : équipe, rôle, moteur, durée, lien pour jouer */
+.fiche {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+  padding: 1.2rem 1.4rem;
+  background: var(--fond-carte);
+  border: 2px dashed var(--violet);
+  border-radius: 14px;
+}
+.fiche dt { font-size: 0.85rem; color: var(--texte-doux); }
+.fiche dd { font-weight: 600; }
+
+/* Image ou GIF du projet */
+.visuel {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 2rem;
+  border-radius: 14px;
+}
+
+/* Un bloc = une rubrique des coulisses */
+.bloc { padding: 1.6rem 0 0; }
+.bloc h2 { font-size: 1.4rem; }
+.bloc p { max-width: 65ch; color: var(--texte-doux); }
+
+.retour { margin-top: 3rem; font-weight: 600; }
+
+/* =========================================================
    CONTACT ET PIED DE PAGE
    ========================================================= */
 #contact p { margin-top: 0.5rem; color: var(--texte-doux); }
