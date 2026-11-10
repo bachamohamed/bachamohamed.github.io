@@ -1,133 +1,106 @@
-/* =========================================================
-   COULEURS ET POLICE : tout se change ici, en haut du fichier
-   ========================================================= */
-:root {
-  --fond: #1c1b3a;          /* bleu nuit : fond de la page */
-  --fond-carte: #27254d;    /* bleu nuit plus clair : fond des cartes */
-  --texte: #f4efff;         /* texte principal */
-  --texte-doux: #b9b3d6;    /* texte secondaire */
-  --accent: #ffb38a;        /* pêche : boutons et liens */
-  --violet: #8d6fe0;        /* violet : bordures et détails */
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  --police: "Outfit", system-ui, sans-serif;
-  --largeur: 860px;         /* largeur maximale du contenu */
-}
+  <!-- TITRE de l'onglet du navigateur : à modifier -->
+  <title>Mohamed BACHA – Game Designer</title>
+  <meta name="description" content="Portfolio de Mohamed BACHA, étudiant en Game Design. Les coulisses de mes projets.">
 
-/* =========================================================
-   BASE (tu n'as normalement pas besoin d'y toucher)
-   ========================================================= */
-* { box-sizing: border-box; margin: 0; padding: 0; }
+  <!-- POLICE : pour changer, remplace "Outfit" ici ET dans style.css (variable --police) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
 
-html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-body {
-  background: var(--fond);
-  color: var(--texte);
-  font-family: var(--police);
-  font-size: 1.05rem;
-  line-height: 1.65;
-}
+  <!-- ========== MENU ========== -->
+  <header class="menu">
+    <a class="logo" href="#accueil">Mohamed BACHA</a>
+    <nav>
+      <a href="#projets">Projets</a>
+      <a href="#liens">Liens</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-a { color: var(--accent); }
-a:hover { text-decoration-thickness: 2px; }
-a:focus-visible, .bouton:focus-visible {
-  outline: 3px solid var(--accent);
-  outline-offset: 3px;
-}
+  <main>
 
-main, .menu, footer {
-  width: min(100% - 2.5rem, var(--largeur));
-  margin-inline: auto;
-}
+    <!-- ========== ACCUEIL ========== -->
+    <section id="accueil" class="accueil">
+      <!-- ACCROCHE : le gros titre, à modifier -->
+      <h1>Game designer en formation. Je te montre comment je réfléchis.</h1>
 
-section { padding: 3.5rem 0; }
+      <!-- PRÉSENTATION : 2 ou 3 phrases maximum -->
+      <p class="intro">
+        Étudiant en 1re année de Game Design à ISART Digital Paris.
+        Ici, tu ne trouveras pas que mes jeux : tu verras aussi les coulisses,
+        c'est-à-dire mes idées, mes erreurs et pourquoi j'ai choisi telle solution plutôt qu'une autre.
+      </p>
 
-h1 { font-size: clamp(2rem, 6vw, 3.4rem); line-height: 1.15; font-weight: 800; max-width: 22ch; }
-h2 { font-size: 1.8rem; font-weight: 800; margin-bottom: 0.5rem; }
-h3 { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.4rem; }
+      <!-- CE QUE TU CHERCHES : à adapter (date, durée…) -->
+      <p class="cherche">Je cherche un stage en game design.</p>
 
-/* =========================================================
-   MENU
-   ========================================================= */
-.menu {
-  position: sticky;
-  top: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.5rem 1.5rem;
-  padding: 1rem 0;
-  background: var(--fond);
-  z-index: 10;
-}
-.logo { font-weight: 800; color: var(--texte); text-decoration: none; }
-.menu nav { display: flex; gap: 1.4rem; }
-.menu nav a { color: var(--texte-doux); text-decoration: none; }
-.menu nav a:hover { color: var(--accent); }
+      <div class="boutons">
+        <a class="bouton" href="#projets">Voir mes projets</a>
+        <!-- CV : remplace "cv.pdf" par le nom de ton fichier, à mettre dans le même dossier -->
+        <a class="bouton secondaire" href="cv.pdf">Télécharger mon CV</a>
+      </div>
+    </section>
 
-/* =========================================================
-   ACCUEIL
-   ========================================================= */
-.accueil { padding-top: 4rem; }
-.intro { margin-top: 1.5rem; max-width: 60ch; color: var(--texte-doux); }
-.cherche { margin-top: 1rem; font-weight: 600; }
+    <!-- ========== PROJETS ========== -->
+    <section id="projets">
+      <h2>Projets</h2>
+      <p class="sous-titre">Pour chaque projet : les contraintes, mes idées et ce que j'en ai retenu.</p>
 
-.boutons { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 2rem; }
-.bouton {
-  display: inline-block;
-  padding: 0.7rem 1.4rem;
-  border-radius: 999px;
-  background: var(--accent);
-  color: var(--fond);
-  font-weight: 600;
-  text-decoration: none;
-}
-.bouton:hover { filter: brightness(1.08); }
-.bouton.secondaire {
-  background: transparent;
-  color: var(--accent);
-  border: 2px solid var(--accent);
-}
+      <div class="grille">
 
-/* =========================================================
-   PROJETS (cartes en pointillés, façon carnet de notes)
-   ========================================================= */
-.sous-titre { color: var(--texte-doux); margin-bottom: 1.8rem; }
+        <!-- CARTE PROJET : copie-colle tout le bloc <article> pour en ajouter un -->
+        <article class="carte">
+          <h3>Mystriss</h3>
+          <p>Une phrase pour accrocher : de quoi ça parle, à quoi on joue.</p>
+          <p class="detail">Solo · Unity · 2026</p>
+          <!-- Quand tu auras la page du projet, remplace "#" par son nom, par exemple "mystriss.html" -->
+          <a href="#">Lire les coulisses</a>
+        </article>
 
-.grille {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.2rem;
-}
-.carte {
-  background: var(--fond-carte);
-  border: 2px dashed var(--violet);
-  border-radius: 14px;
-  padding: 1.4rem;
-}
-.carte p { color: var(--texte-doux); }
-.carte .detail { margin: 0.8rem 0; font-size: 0.9rem; }
-.carte a { font-weight: 600; }
+        <article class="carte">
+          <h3>Jeu de la voiture sans freins</h3>
+          <p>Une phrase pour accrocher : de quoi ça parle, à quoi on joue.</p>
+          <p class="detail">Solo · Unity · 2026</p>
+          <a href="#">Lire les coulisses</a>
+        </article>
 
-/* =========================================================
-   LIENS ET CONTACT
-   ========================================================= */
-.liste-liens { list-style: none; margin-top: 1rem; }
-.liste-liens li { padding: 0.6rem 0; border-bottom: 1px solid var(--fond-carte); color: var(--texte-doux); }
-.liste-liens a { font-weight: 600; }
+      </div>
+    </section>
 
-#contact p { margin-top: 0.5rem; color: var(--texte-doux); }
-.mail { font-size: 1.2rem; font-weight: 600; }
+    <!-- ========== LIENS ========== -->
+    <section id="liens">
+      <h2>Liens</h2>
+      <ul class="liste-liens">
+        <!-- Remplace chaque "#" par ton vrai lien -->
+        <li><a href="#">itch.io</a> pour jouer à mes jeux</li>
+        <li><a href="#">LinkedIn</a> pour mon parcours en détail</li>
+        <li><a href="cv.pdf">CV</a> en PDF</li>
+      </ul>
+    </section>
 
-footer {
-  padding: 2rem 0 3rem;
-  color: var(--texte-doux);
-  font-size: 0.9rem;
-  border-top: 1px solid var(--fond-carte);
-}
+    <!-- ========== CONTACT ========== -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Une question, une proposition, une game jam ? Écris-moi.</p>
+      <!-- Remplace par ton adresse mail (aux deux endroits) -->
+      <p><a class="mail" href="mailto:ton-mail@exemple.com">ton-mail@exemple.com</a></p>
+    </section>
 
-/* Respecte les personnes qui désactivent les animations */
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-}
+  </main>
+
+  <footer>
+    <p>Mohamed BACHA · Fait avec l'aide de Claude</p>
+  </footer>
+
+</body>
+</html>
