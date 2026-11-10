@@ -1,1 +1,133 @@
-tres
+/* =========================================================
+   COULEURS ET POLICE : tout se change ici, en haut du fichier
+   ========================================================= */
+:root {
+  --fond: #1c1b3a;          /* bleu nuit : fond de la page */
+  --fond-carte: #27254d;    /* bleu nuit plus clair : fond des cartes */
+  --texte: #f4efff;         /* texte principal */
+  --texte-doux: #b9b3d6;    /* texte secondaire */
+  --accent: #ffb38a;        /* pêche : boutons et liens */
+  --violet: #8d6fe0;        /* violet : bordures et détails */
+
+  --police: "Outfit", system-ui, sans-serif;
+  --largeur: 860px;         /* largeur maximale du contenu */
+}
+
+/* =========================================================
+   BASE (tu n'as normalement pas besoin d'y toucher)
+   ========================================================= */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
+
+body {
+  background: var(--fond);
+  color: var(--texte);
+  font-family: var(--police);
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+a { color: var(--accent); }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible, .bouton:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+main, .menu, footer {
+  width: min(100% - 2.5rem, var(--largeur));
+  margin-inline: auto;
+}
+
+section { padding: 3.5rem 0; }
+
+h1 { font-size: clamp(2rem, 6vw, 3.4rem); line-height: 1.15; font-weight: 800; max-width: 22ch; }
+h2 { font-size: 1.8rem; font-weight: 800; margin-bottom: 0.5rem; }
+h3 { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.4rem; }
+
+/* =========================================================
+   MENU
+   ========================================================= */
+.menu {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  padding: 1rem 0;
+  background: var(--fond);
+  z-index: 10;
+}
+.logo { font-weight: 800; color: var(--texte); text-decoration: none; }
+.menu nav { display: flex; gap: 1.4rem; }
+.menu nav a { color: var(--texte-doux); text-decoration: none; }
+.menu nav a:hover { color: var(--accent); }
+
+/* =========================================================
+   ACCUEIL
+   ========================================================= */
+.accueil { padding-top: 4rem; }
+.intro { margin-top: 1.5rem; max-width: 60ch; color: var(--texte-doux); }
+.cherche { margin-top: 1rem; font-weight: 600; }
+
+.boutons { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 2rem; }
+.bouton {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--fond);
+  font-weight: 600;
+  text-decoration: none;
+}
+.bouton:hover { filter: brightness(1.08); }
+.bouton.secondaire {
+  background: transparent;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+}
+
+/* =========================================================
+   PROJETS (cartes en pointillés, façon carnet de notes)
+   ========================================================= */
+.sous-titre { color: var(--texte-doux); margin-bottom: 1.8rem; }
+
+.grille {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.2rem;
+}
+.carte {
+  background: var(--fond-carte);
+  border: 2px dashed var(--violet);
+  border-radius: 14px;
+  padding: 1.4rem;
+}
+.carte p { color: var(--texte-doux); }
+.carte .detail { margin: 0.8rem 0; font-size: 0.9rem; }
+.carte a { font-weight: 600; }
+
+/* =========================================================
+   LIENS ET CONTACT
+   ========================================================= */
+.liste-liens { list-style: none; margin-top: 1rem; }
+.liste-liens li { padding: 0.6rem 0; border-bottom: 1px solid var(--fond-carte); color: var(--texte-doux); }
+.liste-liens a { font-weight: 600; }
+
+#contact p { margin-top: 0.5rem; color: var(--texte-doux); }
+.mail { font-size: 1.2rem; font-weight: 600; }
+
+footer {
+  padding: 2rem 0 3rem;
+  color: var(--texte-doux);
+  font-size: 0.9rem;
+  border-top: 1px solid var(--fond-carte);
+}
+
+/* Respecte les personnes qui désactivent les animations */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
