@@ -25,7 +25,7 @@
 
       <!-- MENU DÉROULANT "LIENS" : remplace chaque "#" par ton vrai lien -->
       <div class="deroulant">
-        <button class="deroulant-bouton" aria-expanded="false" aria-haspopup="true">Liens</button>
+        <button class="deroulant-bouton" type="button" aria-haspopup="true">Liens</button>
         <ul class="sous-menu">
           <li><a href="#">itch.io</a></li>
           <li><a href="#">LinkedIn</a></li>
@@ -102,30 +102,23 @@
   </footer>
 
   <!-- ========== SCRIPT DU MENU DÉROULANT (tu n'as pas besoin d'y toucher) ========== -->
+  <!-- Ordinateur : le menu s'ouvre uniquement au passage de la souris (géré par le CSS). -->
+  <!-- Téléphone / tablette : un appui sur "Liens" ouvre le menu, un appui ailleurs le ferme. -->
   <script>
     const deroulant = document.querySelector('.deroulant');
     const bouton = deroulant.querySelector('.deroulant-bouton');
+    const aUneSouris = window.matchMedia('(hover: hover)');
 
-    function fermer() {
-      deroulant.classList.remove('ouvert');
-      bouton.setAttribute('aria-expanded', 'false');
-    }
-
-    // Clic sur "Liens" : ouvre ou ferme le menu (utile sur téléphone)
+    // Appui sur "Liens" : uniquement sur appareil tactile
     bouton.addEventListener('click', function (e) {
+      if (aUneSouris.matches) return;
       e.stopPropagation();
-      const ouvert = deroulant.classList.toggle('ouvert');
-      bouton.setAttribute('aria-expanded', ouvert);
+      deroulant.classList.toggle('ouvert');
     });
 
-    // Clic ailleurs sur la page : le menu se ferme
+    // Appui ailleurs sur la page : le menu se ferme
     document.addEventListener('click', function (e) {
-      if (!deroulant.contains(e.target)) fermer();
-    });
-
-    // Touche Échap : le menu se ferme aussi
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape') fermer();
+      if (!deroulant.contains(e.target)) deroulant.classList.remove('ouvert');
     });
   </script>
 
