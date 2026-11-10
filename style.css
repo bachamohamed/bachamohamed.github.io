@@ -78,7 +78,7 @@ h3 { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.4rem; }
   color: var(--texte-doux);
   cursor: pointer;
 }
-.deroulant-bouton:hover,
+.deroulant:hover .deroulant-bouton,
 .deroulant.ouvert .deroulant-bouton { color: var(--accent); }
 .deroulant-bouton:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
 
@@ -104,12 +104,16 @@ h3 { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.4rem; }
 }
 .menu .sous-menu a:hover { background: var(--fond); color: var(--accent); }
 
-/* Ouvert par un clic (téléphone) */
-.deroulant.ouvert .sous-menu { display: block; }
-
-/* Ouvert au survol (ordinateur uniquement) */
+/* ORDINATEUR (appareil avec souris) : le menu s'ouvre uniquement au survol.
+   Il reste aussi accessible au clavier (touche Tab). */
 @media (hover: hover) {
-  .deroulant:hover .sous-menu { display: block; }
+  .deroulant:hover .sous-menu,
+  .deroulant:has(:focus-visible) .sous-menu { display: block; }
+}
+
+/* TÉLÉPHONE / TABLETTE (écran tactile) : ouvert par un appui sur "Liens" */
+@media (hover: none) {
+  .deroulant.ouvert .sous-menu { display: block; }
 }
 
 /* =========================================================
