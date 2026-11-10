@@ -62,9 +62,55 @@ h3 { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.4rem; }
   z-index: 10;
 }
 .logo { font-weight: 800; color: var(--texte); text-decoration: none; }
-.menu nav { display: flex; gap: 1.4rem; }
-.menu nav a { color: var(--texte-doux); text-decoration: none; }
-.menu nav a:hover { color: var(--accent); }
+.menu nav { display: flex; gap: 1.4rem; align-items: center; }
+.menu nav > a { color: var(--texte-doux); text-decoration: none; }
+.menu nav > a:hover { color: var(--accent); }
+
+/* =========================================================
+   MENU DÉROULANT "LIENS"
+   ========================================================= */
+.deroulant { position: relative; }
+
+.deroulant-bouton {
+  background: none;
+  border: 0;
+  font: inherit;
+  color: var(--texte-doux);
+  cursor: pointer;
+}
+.deroulant-bouton:hover,
+.deroulant.ouvert .deroulant-bouton { color: var(--accent); }
+.deroulant-bouton:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+
+.sous-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  min-width: 180px;
+  list-style: none;
+  padding: 0.5rem;
+  background: var(--fond-carte);
+  border: 2px dashed var(--violet);
+  border-radius: 12px;
+  z-index: 20;
+}
+.menu .sous-menu a {
+  display: block;
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+  color: var(--texte);
+  text-decoration: none;
+}
+.menu .sous-menu a:hover { background: var(--fond); color: var(--accent); }
+
+/* Ouvert par un clic (téléphone) */
+.deroulant.ouvert .sous-menu { display: block; }
+
+/* Ouvert au survol (ordinateur uniquement) */
+@media (hover: hover) {
+  .deroulant:hover .sous-menu { display: block; }
+}
 
 /* =========================================================
    ACCUEIL
@@ -111,12 +157,8 @@ h3 { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.4rem; }
 .carte a { font-weight: 600; }
 
 /* =========================================================
-   LIENS ET CONTACT
+   CONTACT ET PIED DE PAGE
    ========================================================= */
-.liste-liens { list-style: none; margin-top: 1rem; }
-.liste-liens li { padding: 0.6rem 0; border-bottom: 1px solid var(--fond-carte); color: var(--texte-doux); }
-.liste-liens a { font-weight: 600; }
-
 #contact p { margin-top: 0.5rem; color: var(--texte-doux); }
 .mail { font-size: 1.2rem; font-weight: 600; }
 
