@@ -130,6 +130,18 @@
     document.addEventListener('click', function (e) {
       if (!deroulant.contains(e.target)) deroulant.classList.remove('ouvert');
     });
+    // Bouton "Copier" l'adresse mail
+const boutonCopier = document.getElementById('bouton-copier');
+const adresse = document.getElementById('adresse-mail').textContent;
+
+boutonCopier.addEventListener('click', function () {
+  navigator.clipboard.writeText(adresse).then(function () {
+    boutonCopier.textContent = 'Copié !';
+    setTimeout(function () {
+      boutonCopier.textContent = 'Copier';
+    }, 2000);
+  });
+});
   </script>
 
 </body>
