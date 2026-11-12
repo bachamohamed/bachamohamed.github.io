@@ -215,6 +215,10 @@ h3 { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.4rem; }
 }
 .copier:hover { background: var(--accent); color: var(--fond); }
 .copier:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+/* Dans le menu : le lien et le bouton Copier sur la même ligne */
+.sous-menu li { display: flex; align-items: center; gap: 0.4rem; }
+.sous-menu li > a { flex: 1; }
+.sous-menu .copier { margin-left: 0; padding: 0.2rem 0.7rem; font-size: 0.8rem; }
 
 footer {
   padding: 2rem 0 3rem;
