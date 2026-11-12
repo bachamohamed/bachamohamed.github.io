@@ -201,6 +201,20 @@ h3 { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.4rem; }
    ========================================================= */
 #contact p { margin-top: 0.5rem; color: var(--texte-doux); }
 .mail { font-size: 1.2rem; font-weight: 600; }
+.copier {
+  margin-left: 0.6rem;
+  padding: 0.3rem 0.9rem;
+  border: 2px solid var(--accent);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--accent);
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.copier:hover { background: var(--accent); color: var(--fond); }
+.copier:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
 
 footer {
   padding: 2rem 0 3rem;
