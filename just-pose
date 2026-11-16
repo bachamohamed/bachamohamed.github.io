@@ -6,7 +6,7 @@
   <link rel="icon" href="favicon.png" type="image/png">
 
   <!-- TITRE de l'onglet : à modifier -->
-  <title>Mystris | Mohamed BACHA</title>
+  <title>Just pose | Mohamed BACHA</title>
   <meta name="description" content="Les coulisses de Mystriss : contraintes, idées et choix de game design.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,18 +37,18 @@
     <article class="projet">
 
       <!-- TITRE DU PROJET -->
-      <h1>Mystris</h1>
+      <h1>Just pose</h1>
       <!-- ACCROCHE : une phrase -->
-      <p class="intro">Comment j'ai réussit a faire Mystris.</p>
+      <p class="intro">Comment j'ai réussit a faire Just pose.</p>
 
       <!-- FICHE RAPIDE : lue en 5 secondes par un recruteur. Remplace chaque "À compléter". -->
       <dl class="fiche">
-        <div><dt>Équipe</dt><dd>Solo</dd></div>
-        <div><dt>Mon rôle</dt><dd>Game Designer Programeur      Illustrateur</dd></div>
-        <div><dt>Moteur</dt><dd>Unity Visual Scripting   Canva        Photoshop  </dd></div>
+        <div><dt>Équipe</dt><dd>8 membre</dd></div>
+        <div><dt>Mon rôle</dt><dd>Game Designer Level Designer      Illustrateur</dd></div>
+        <div><dt>Moteur</dt><dd>Word  Powerpoint     Canva        Photoshop  </dd></div>
         <div><dt>Durée</dt><dd>48h</dd></div>
-         <div><dt>Théme</dt><dd>Choix arrive apres la consequance</dd></div>
-        <div><dt>Jouer</dt><dd><a href="https://blazyper.itch.io/mystris">Page itch.io</a></dd></div>
+         <div><dt>Théme</dt><dd>Liens Invisible</dd></div>
+        <div><dt>Jouer</dt><dd><a href="https://blazyper.itch.io/just-pose">Page itch.io</a></dd></div>
       </dl>
 
       <!-- IMAGE OU GIF : décommente la ligne ci-dessous et mets le nom de ton fichier image
@@ -58,42 +58,45 @@
       <!-- RUBRIQUES : garde des blocs courts (3 à 4 phrases). Copie-colle un <section class="bloc"> pour en ajouter. -->
       <section class="bloc">
         <h2>Les contraintes de départ</h2>
-        <p>Il y avait principalement le temps , c'étais pour une Game Jam qui dure 48h , et j'étais seul , donc pas de programeur , ni d'illustrateur.</p>
+        <p>Le plus dur , j'ai envie de dire que c'étais de choisir un groupe, car il y avait une contrainte... Il fallait etre minimun 4.Et je passer d'un groupe a un autre pour voir lequel m'allait le mieux,
+chaque personne avait l'air ou était extremement competente dans leurs domaines, certains était a leurs 6éme Jam , d'autre on crée leurs propres studio indépendant, et leurs idées avait du sens et était fesable en 48h 
+acharné, j'ai choisit le groupe qui voulait faire de la réalité virtuelle (VR), déjà car c'était mon premier jeu en VR ,et que ça enjete d'avoir un jeu VR en projet dans le CV d'un premiere année, mais aussi car
+leurs idées étais plutôt simple.</p>
       </section>
 
       <section class="bloc">
-        <h2>Ce que j'avais à disposition</h2>
-        <p>J'ai des connaisances en Unity Visual Scripting , et j'ai accées a des assets libre de droit ,mais j'ai aussi Blender , car j'en ai fait pendant un petit moment et toujours avec moi un carnet avec son stylo pour prototypé </p>
+        <h2>Ce que je pouvais apporter au groupe</h2>
+        <p>J'ai choisit mon groupe pour leurs idées simple, un mannequin qu'on doit déplacer, la VR fesait tout le reste, mais moi, grand fan de jojo bizarre adventure, et qui est aussi connue pour c'est fameuse jojo pose ,
+j'ai vue la l'opportuniter de venir apporter des positions original, mais qui change le comportement du joueur, meme si je n'avait jamais fait de jeu en VR, ce n'était pas un problème pour moi, car quand je ne connais pas 
+quelque chose, je me renseigne, je test, et j'observe, et j'ai compris les differents comportements que le joueur peut avoir en VR, je savais aussi que j'allais etre un support dans tout se qui vas etre visuel, 
+car il n'y avait pas de Game Art , ni de personne qui avait le temps pour faire le logo, la banniere , trouver un nom, ect.</p>
       </section>
 
       <section class="bloc">
         <h2>Le message que je voulais faire passer</h2>
-        <p>Dès le début je voulais un jeu simple , déjà part contrainte de temps , mais aussi parce que mon public cible son des joueurs casual , et que les joueurs passent un moment chill sur le jeu, en fesant un espace detandu et acceuillant </p>
+        <p>Au tout debut, se n'etais pas un mannequin en bois qu'on avait , mais un tétraplégique. Car on voulait mettre en valeur une minorité dans le monde du jeu vidéo, mais aussi en dehors,
+on s'etait aussi inspiré de jojo bizarre adventure, plus précisement Steel Ball Run, car le personnage principale est paraplégique, mais c'etait une hot take, car on peut vite tombé dans un message qui fasse plus 
+de mal que de bien, alors j'ai fait des recherche, et demander a des personne qui si connaisser, et qui m'ont clairement dit que dans ce jeu là cela aurait etait problematique. Donc on abandonnée cette idée pour ce jeu.</p>
       </section>
 
       <section class="bloc">
         <h2>Le résultat que j'attendais</h2>
-        <p>Je m'attendais a ce que le joueur comprenent les régles très simplement, et a un jeu agréable dans la prise en main, avec du Juice , des sons effects agréable et qu'on as du controle sur la stratégie qu'on veux employé</p>
+        <p></p>
       </section>
 
       <section class="bloc">
         <h2>Les contraintes rencontrées</h2>
-        <p>Au début, la programmation était plutôt simple, parce que la base du jeu n'est pas très complexe, mais je savais, par experience, que le vrai défis serai de rentre de jeu agréable, c'etait surtout des ajustement à faire, et les playtests aller être complexe etudier car c'est quelque chose de très subjectif, j'avais aussi un probleme de visibilité, on arrivé pas a bien voir les formes au fur et a mesure de la partie, mais j'ai réussit a me débroulé pendant les 48h , j'envisarerai peu être de faire quelque chose de plus propre si je veux publié le jeu</p>
+        <p></p>
       </section>
 
       <section class="bloc">
         <h2>Mes idées et pourquoi celle-là</h2>
-        <p>Je voulais que le plus de monde puissent y jouer ,et ducoup mon public cible était des joueurs casual, donc des régles facile a comprendre rapidement, et sa m'avantager avec le temps limité que j'avais a disposition, 
-        avec le theme de la Game Jam , qui était "choix arrive apres la consequance", et j'ai pris la base de tétris pour m'aider, et je me suis dit la consequance de Tetris, sur la petite boucle "Challenge:la forme apparait, Objectif:déplacer l'object dans un endroit avantageux,Récompense:L'object est posée, et on gagne des point"
-        C'étais de posée un object , parce que le joueur choisit l'endroit qu'il vas poser son object, j'ai donc retiré cette possibilité , en mettant a la place un cube mistere, mais sa peut crée trop d'aléatoire et de chaos ,
-        et surtout qu'il manqué le choix que le joueur doit faire, j'ai donc laisser la possibilier de choisir la forme apres qu'elle soit posé , cela rentre parfaitement avec le theme , et c'est une mecanique originale et facilement comprehencible.</p>
+        <p></p>
       </section>
 
       <section class="bloc">
         <h2>qu'est-ce que j'ai aimé/pas aimé faire</h2>
-        <p>J'ai beaucoup aimé réflechir a cette idée, mais je pense que le plus grand plaisir que j'ai ressentis , c'est quand a la fin de la Game Jam , pendant qu'il etait entrain de tout rangé, il y a un parent pas très joueur, d'un ami qui et venus testé le jeu ,
-        et que sans rien lui expliqué et en etant absent 30 minute, pour aider au rangement, je suis revenue le voir, et qu'il avait exploser le high score, toujours sur la meme partie, et qu'une fois fini, il m'a dit qu'il avait pris énormement de plaisir 
-        a assemblé les formes , qu'il n'avait pas vue le temps passé et que sa lui fesait rappeller l'époque de quand tetris était sorti.</p>
+        <p></p>
       </section>
 
       <p class="retour"><a href="index.html#projets">Retour aux projets</a></p>
